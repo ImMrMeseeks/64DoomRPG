@@ -74,10 +74,8 @@ To build a rom, you will need:
 
 No contributions will be taken for this repository, but please take a copy source code and make a better version than what has been produced.  
 
-Credits:  
-
--DoomRPG reverse engineering by Erick194, BSzili & Jakubito https://github.com/Erick194/DoomRPG-RE  
--BarToZip program  
+Credit and special thanks:  
+-DoomRPG reverse engineering and BarToZip by Erick194, BSzili & Jakubito https://github.com/Erick194/DoomRPG-RE   
 -libdragon conker64 https://github.com/conker64/libdragon  
 -libdragon community https://github.com/DragonMinded/libdragon  
 -N64brew community  
