@@ -14,11 +14,11 @@ Rumble support
 Accessory checks for rumble and saving
 Deblur option
 FPS counter available
-rdp used to draw:
--wall spans
--floor and ceiling when Floor/Ceil is turned off (improved performance) 
--hud
--text
+RDP used to draw:
+-Wall spans
+-Floor and Ceiling when Floor/Ceil is turned off (improved performance) 
+-HUD
+-Text
 -menus
 -filled rectangles
 -xm audio playback (midi files need to be converted, used open mpt to do so)
@@ -35,8 +35,9 @@ Oppotunities for new features:
 -Fix infinite loop bug with time check once ticks overflow 
 -Use modern toolchain
 -Draw floors and ceiling using polygons to improve performance
--New algorithm to store sprite spans in memory for the rdp
--Draw sprite spans using rdp
+-New algorithm to store sprite spans in memory for the RDP
+-Draw sprite spans using RDP
+-Improve text rendering
 -Music playback via midi
 -Improve Music loading time
 -Fix audio noise
@@ -74,7 +75,11 @@ No contributions will be taken for this repository, but please take a copy sourc
 
 Credits:
 -DoomRPG reverse engineering by Erick194, BSzili & Jakubito https://github.com/Erick194/DoomRPG-RE
+
 -bar2zip program
+
 -libdragon conker64 https://github.com/conker64/libdragon
+
 -libdragon community https://github.com/DragonMinded/libdragon
+
 -N64brew community
