@@ -72,6 +72,8 @@ To build a rom, you will need:
 	-file->save as into filesystem directory  
 5. run Buildrom batch file  
 
+
+If you want to compile the source code this was created using make from mingw with cygwin. I have made the entire ROM using a batch file but will include a normal makefile.    
 No contributions will be taken for this repository, but please take a copy source code and make a better version than what has been produced.  
 
 Credit and special thanks:  
