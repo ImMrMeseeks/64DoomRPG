@@ -80,4 +80,5 @@ Credit and special thanks:
 -DoomRPG reverse engineering and BarToZip by Erick194, BSzili & Jakubito https://github.com/Erick194/DoomRPG-RE   
 -libdragon conker64 https://github.com/conker64/libdragon  
 -libdragon community https://github.com/DragonMinded/libdragon  
--N64brew community  
+-N64Brew Wiki https://n64brew.dev/wiki/Main_Page
+-N64brew community  https://discord.gg/WqFgNWf
