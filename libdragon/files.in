@@ -1,0 +1,105 @@
+OFILES_LD  = $(N64_INST)/build/n64sys.o
+OFILES_LD += $(N64_INST)/build/interrupt.o
+OFILES_LD += $(N64_INST)/build/inthandler.o
+OFILES_LD += $(N64_INST)/build/entrypoint.o
+OFILES_LD += $(N64_INST)/build/dragonfs.o
+OFILES_LD += $(N64_INST)/build/audio.o
+OFILES_LD += $(N64_INST)/build/display.o
+OFILES_LD += $(N64_INST)/build/console.o
+OFILES_LD += $(N64_INST)/build/controller.o
+OFILES_LD += $(N64_INST)/build/mempak.o
+OFILES_LD += $(N64_INST)/build/graphics.o
+OFILES_LD += $(N64_INST)/build/rdp.o
+OFILES_LD += $(N64_INST)/build/dma.o
+OFILES_LD += $(N64_INST)/build/timer.o
+OFILES_LD += $(N64_INST)/build/exception.o
+
+OFILES_LDS  = $(N64_INST)/build/system.o
+
+OFILES_LDP  = $(N64_INST)/build/n64sys.o
+OFILES_LDP += $(N64_INST)/build/interrupt.o
+OFILES_LDP += $(N64_INST)/build/inthandler.o
+OFILES_LDP += $(N64_INST)/build/entrypoint_2.o
+OFILES_LDP += $(N64_INST)/build/dragonfs.o
+OFILES_LDP += $(N64_INST)/build/audio.o
+OFILES_LDP += $(N64_INST)/build/display.o
+OFILES_LDP += $(N64_INST)/build/console.o
+OFILES_LDP += $(N64_INST)/build/controller.o
+OFILES_LDP += $(N64_INST)/build/graphics.o
+OFILES_LDP += $(N64_INST)/build/rdp.o
+OFILES_LDP += $(N64_INST)/build/dma.o
+OFILES_LDP += $(N64_INST)/build/timer.o
+OFILES_LDP += $(N64_INST)/build/exception.o
+OFILES_LDP += $(N64_INST)/build/do_ctors.o
+
+# Rules for compiling system stuff
+$(N64_INST)/build/n64sys.o: $(N64_INST)/src/n64sys.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/n64sys.o $(N64_INST)/src/n64sys.c
+$(N64_INST)/build/interrupt.o: $(N64_INST)/src/interrupt.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/interrupt.o $(N64_INST)/src/interrupt.c
+$(N64_INST)/build/dma.o: $(N64_INST)/src/dma.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/dma.o $(N64_INST)/src/dma.c
+$(N64_INST)/build/inthandler.o: $(N64_INST)/src/inthandler.S
+	mkdir -p $(N64_INST)/build
+	$(CC) -c -o $(N64_INST)/build/inthandler.o $(N64_INST)/src/inthandler.S
+$(N64_INST)/build/entrypoint.o: $(N64_INST)/src/entrypoint.S
+	mkdir -p $(N64_INST)/build
+	$(CC) -c -o $(N64_INST)/build/entrypoint.o $(N64_INST)/src/entrypoint.S
+
+# Rules for compiling filesystem
+$(N64_INST)/build/dragonfs.o: $(N64_INST)/src/dragonfs.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/dragonfs.o $(N64_INST)/src/dragonfs.c
+
+# Rules for compiling audio system
+$(N64_INST)/build/audio.o: $(N64_INST)/src/audio.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/audio.o $(N64_INST)/src/audio.c
+
+# Rules for compiling video system
+$(N64_INST)/build/display.o: $(N64_INST)/src/display.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/display.o $(N64_INST)/src/display.c
+$(N64_INST)/build/console.o: $(N64_INST)/src/console.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/console.o $(N64_INST)/src/console.c
+$(N64_INST)/build/graphics.o: $(N64_INST)/src/graphics.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/graphics.o $(N64_INST)/src/graphics.c
+$(N64_INST)/build/rdp.o: $(N64_INST)/src/rdp.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/rdp.o $(N64_INST)/src/rdp.c
+
+# Rules for compiling controller system
+$(N64_INST)/build/controller.o: $(N64_INST)/src/controller.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/controller.o $(N64_INST)/src/controller.c
+$(N64_INST)/build/mempak.o: $(N64_INST)/src/mempak.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/mempak.o $(N64_INST)/src/mempak.c
+
+# Rules for compiling timer system
+$(N64_INST)/build/timer.o: $(N64_INST)/src/timer.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/timer.o $(N64_INST)/src/timer.c
+
+# Rules for compiling exception system
+$(N64_INST)/build/exception.o: $(N64_INST)/src/exception.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/exception.o $(N64_INST)/src/exception.c
+
+# Rules for compiling newlib interface
+$(N64_INST)/build/system.o: $(N64_INST)/src/system.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/system.o $(N64_INST)/src/system.c
+
+# Rules for compiling c++ extras
+$(N64_INST)/build/entrypoint_2.o: $(N64_INST)/src/entrypoint_2.S
+	mkdir -p $(N64_INST)/build
+	$(CC) -c -o $(N64_INST)/build/entrypoint_2.o $(N64_INST)/src/entrypoint_2.S
+$(N64_INST)/build/do_ctors.o: $(N64_INST)/src/do_ctors.c
+	mkdir -p $(N64_INST)/build
+	$(CC) $(CFLAGS) -c -o $(N64_INST)/build/do_ctors.o $(N64_INST)/src/do_ctors.c
