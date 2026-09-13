@@ -31,7 +31,7 @@ Music Load times for music takes a few seconds
 Bug with infinite loop on player or monster seq, when time in sequence is near the max returned tick value  
 	-Avoid by turning off floors and ceilings  
 
-Oppotunities for new features:  
+Oppotunities for improved functionality:  
 Fix infinite loop bug with time check once ticks overflow  
 Use modern toolchain  
 Draw floors and ceiling using polygons to improve performance  
@@ -72,8 +72,9 @@ To build a rom, you will need:
 	-file->save as into filesystem directory  
 5. run Buildrom batch file  
 
-
-If you want to compile the source code this was created using make from mingw with cygwin. I have made the entire ROM using a batch file but will include a normal makefile.    
+Compile:  
+During development a simple batch file was developed to compile the ROM, however this will not be provided with this repository instead a normal makefile has been provided.
+If you want to compile the source code this was created using make from mips64-elf from mingw within cygwin.  
 No contributions will be taken for this repository, but please take a copy source code and make a better version than what has been produced.  
 
 Credit and special thanks:  
