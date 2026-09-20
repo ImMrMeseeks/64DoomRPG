@@ -27,11 +27,11 @@ RDP used to draw:
 Known Issues:  
 Saving currently checks for existing game save blocks with the same ID as toolchain to overwrite and Delete  
 Audio noise when nothing played  
-Music Load times for music takes a few seconds  
+Load times for music takes a few seconds  
 Bug with infinite loop on player or monster seq, when time in sequence is near the max returned tick value  
 	-Avoid by turning off floors and ceilings  
 
-Oppotunities for improved functionality:  
+Opportunities for improved functionality:  
 Fix infinite loop bug with time check once ticks overflow  
 Use modern toolchain  
 Draw floors and ceiling using polygons to improve performance  
